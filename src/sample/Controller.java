@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.VBox;
 
 
 public class Controller extends TworzenieMacierzy{
@@ -24,25 +25,28 @@ public class Controller extends TworzenieMacierzy{
     @FXML Label a42;
     @FXML Label a43;
     @FXML Label a44;
+    @FXML Button b1;
+    @FXML Button b2;
+    @FXML VBox vb;
+    @FXML Label wynik;
+    @FXML MenuItem m1;
+    @FXML MenuItem m2;
     Label [] [] macierz2x2;
     Label [] [] macierz3x3;
     int [] [] macierzInt2x2 = new int[2][2];
     int [] [] macierzInt3x3 = new int[3][3];
-    @FXML Button b1;
-    @FXML Button b2;
-
+    String color1 = "-fx-background-color: rgba(255, 255, 255, 0.5);" +
+            "-fx-effect: dropshadow(gaussian, blue, 50, 0, 0, 0);" +
+            "-fx-background-insets: 50;";
     OperacjeNaMacierzach operacjeNaMacierzach = new OperacjeNaMacierzach();
-    @FXML Label wynik;
-
-    @FXML MenuItem m1;
-    @FXML MenuItem m2;
-
     public void initialize()
     {
         m1.setDisable(true);
         m2.setDisable(true);
         b1.setDisable(true);
         b2.setDisable(true);
+        vb.setStyle(color1);
+
     }
 
 
